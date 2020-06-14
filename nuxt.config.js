@@ -1,3 +1,22 @@
+const minify = {
+  collapseBooleanAttributes: true,
+  collapseWhitespace: true,
+  decodeEntities: true,
+  minifyCSS: true,
+  minifyJS: true,
+  processConditionalComments: true,
+  removeAttributeQuotes: true,
+  removeComments: true,
+  removeEmptyAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  removeTagWhitespace: true,
+  sortClassName: true,
+  trimCustomFragments: true,
+  useShortDoctype: true
+}
 
 module.exports = {
   mode: 'universal',
@@ -53,6 +72,11 @@ module.exports = {
   */
   axios: {
   },
+  generate: {
+    html: {
+      minify
+    }
+  },
   /*
   ** Build configuration
   */
@@ -63,6 +87,16 @@ module.exports = {
     */
     extend (config, ctx) {
     },
-    cache: true
+    cache: true,
+    html: {
+      minify
+    },
+    loaders: {
+      vue: {
+        compilerOptions: {
+          whitespace: 'condense'
+        }
+      }
+    }
   }
 }

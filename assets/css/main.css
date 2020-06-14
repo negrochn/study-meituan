@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "MIcrosoft YaHei", sans-serif !important;
+  background-color: #F8F8F8;
+}
+
+
+@font-face {
+  font-family: "com_header";
+  src: url("~assets/font/header.eot?t=1501036445556"); /* IE9*/
+  src: url("~assets/font/header.eot?t=1501036445556#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("~assets/font/header.woff?t=1501036445556") format("woff"), /* chrome, firefox */
+  url("~assets/font/header.ttf?t=1501036445556") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url("~assets/font/header.svg?t=1501036445556#iconfont") format("svg"); /* iOS 4.1- */
+}
+@font-face {
+  font-family: "com_header";
+  src: url("~assets/font/iconfont-search.eot"); /* IE9 */
+  src: url("~assets/font/iconfont-search.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("~assets/font/iconfont-search.woff") format("woff"), /* chromeã€firefox */
+  url("~assets/font/iconfont-search.ttf") format("truetype"); /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+ */
+}
+.com-header {
+  background: #fff;
+  box-shadow: 0 2px 27px 0 rgba(0,0,0,0.10);
+}
+.com-header .header-icon {
+  font-family: "com_header" !important;
+  font-size: 18px;
+  font-style: ormal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.com-header .icon-header_location:before {
+  content: "\e60a";
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
