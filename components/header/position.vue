@@ -44,6 +44,12 @@ export default {
 .position {
   float: left;
   padding-top: 12px;
+  a {
+    color: #999;
+    &:hover {
+      color: #FE8C00;
+    }
+  }
   .header-icon {
     font-size: 12px;
   }
@@ -65,6 +71,11 @@ export default {
       margin: 0 4px;
       color: #999;
     }
+    a:hover {
+      span {
+        color: #FE8C00;
+      }
+    }
   }
   .user-entry {
     display: inline-block;
@@ -73,10 +84,15 @@ export default {
       display: inline;
       margin-left: 10px;
       color: #FE8C00;
+      cursor: pointer;
     }
     .extra-entry {
       display: inline;
       margin-left: 10px;
+      cursor: pointer;
+      span:hover {
+        color: #FE8C00;
+      }
     }
   }
 }

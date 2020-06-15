@@ -98,20 +98,21 @@
           </li>
         </ul>
       </li>
-      <li class="has-child">
+      <li class="has-child" @mouseenter="isSiteShow = true" @mouseleave="isSiteShow = false">
         <span>网站导航</span>
-        <div class="header-nav-site header-nav-second">
-          <dl class="header-jiulv header-nav-third">
-            1
-          </dl>
-          <dl class="header-meishi header-nav-third">
-            2
-          </dl>
-          <dl class="header-movie header-nav-third">
-            3
-          </dl>
-          <dl class="header-app header-nav-third">
-            4
+        <div v-show="isSiteShow" class="header-nav-site header-nav-second">
+          <dl
+            v-for="item in siteList"
+            :key="item.id"
+            :class="`header-${item.id} header-nav-third`"
+          >
+            <dt>{{ item.label }}</dt>
+            <dd v-for="itm in item.children" :key="itm.label">
+              <nuxt-link :to="itm.path">
+                <img v-if="itm.imgSrc" class="appicon" :src="itm.imgSrc" :alt="itm.label">
+                <span v-else>{{ itm.label }}</span>
+              </nuxt-link>
+            </dd>
           </dl>
         </div>
       </li>
@@ -126,7 +127,65 @@ export default {
     return {
       isUserInfoShow: false,
       isBusinessCenterShow: false,
-      isMeituanRulesShow: false
+      isMeituanRulesShow: false,
+      isSiteShow: false,
+      siteList: [
+        {
+          id: 'jiulv',
+          label: '酒店旅游',
+          children: [
+            { label: '国际机票', path: '/iflight' },
+            { label: '火车票', path: '/train' },
+            { label: '民宿', path: '/minsu' },
+            { label: '经济型酒店', path: '/hotel/hangzhou/c20036' },
+            { label: '主题酒店', path: '/hotel/hangzhou/c20037' },
+            { label: '商务酒店', path: '/hotel/hangzhou/c20038' },
+            { label: '公寓', path: '/hotel/hangzhou/c20039' },
+            { label: '豪华酒店', path: '/hotel/hangzhou/c20040' },
+            { label: '客栈', path: '/hotel/hangzhou/c20041' },
+            { label: '青年旅社', path: '/hotel/hangzhou/c20042' },
+            { label: '度假酒店', path: '/hotel/hangzhou/c20043' },
+            { label: '别墅', path: '/hotel/hangzhou/c20044' },
+            { label: '农家院', path: '/hotel/hangzhou/c20045' }
+          ]
+        },
+        {
+          id: 'meishi',
+          label: '吃美食',
+          children: [
+            { label: '烤鱼', path: '/meishi/c20004' },
+            { label: '特色小吃', path: '/meishi/c36' },
+            { label: '烧烤', path: '/meishi/c54' },
+            { label: '自助餐', path: '/meishi/c40' },
+            { label: '火锅', path: '/meishi/c17' },
+            { label: '代金券', path: '/meishi/c393' }
+          ]
+        },
+        {
+          id: 'movie',
+          label: '看电影',
+          children: [
+            { label: '热映电影', path: '/maoyan/films' },
+            { label: '热门影院', path: '/maoyan/cinemas' },
+            { label: '热映电影口碑榜', path: '/maoyan/board' },
+            { label: '最受期待电影', path: '/maoyan/board/6' },
+            { label: '国内票房榜', path: '/maoyan/board/1' },
+            { label: '北美票房榜', path: '/maoyan/board/2' },
+            { label: '电影排行榜', path: '/maoyan/board/4' }
+          ]
+        },
+        {
+          id: 'app',
+          label: '手机应用',
+          children: [
+            { label: '美团app', path: '/mobile/down/meituan', imgSrc: '//s0.meituan.net/bs/fe-web-meituan/2d53095/img/appicons/meituan.png' },
+            { label: '外卖app', path: '/mobile/down/download/default', imgSrc: '//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/waimai.png' },
+            { label: '民宿app', path: '/minsu/app', imgSrc: 'https://p0.meituan.net/travelcube/162c3308d9622f6d9cfaa49e60be4dca8573.png' },
+            { label: '点评app', path: '/dianping', imgSrc: '//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/dianping.png' },
+            { label: '猫眼app', path: '/maoyan/app', imgSrc: '//s1.meituan.net/bs/fe-web-meituan/404d350/img/appicons/maoyan.png' }
+          ]
+        }
+      ]
     }
   }
 }
@@ -138,6 +197,12 @@ export default {
   .nav-ul {
     margin: 0;
     padding: 0;
+    a {
+      color: #999;
+        &:hover {
+          color: #FE8C00;
+        }
+    }
     & > li {
       float: left;
       position: relative;
@@ -147,7 +212,7 @@ export default {
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
       list-style: none;
-      & > a, & > span {
+      & > span {
         color: #999;
         &:hover {
           color: #FE8C00;
@@ -162,6 +227,7 @@ export default {
         padding: 0;
         width: 100%;
         background: #fff;
+        text-align: center;
         border: 1px solid #E5E5E5;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
         border-bottom-left-radius: 4px;
@@ -193,6 +259,18 @@ export default {
         .header-nav-third {
           float: left;
           margin-right: 47px;
+          dt {
+            margin-bottom: 26px;
+            color: #222;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          dd {
+            a {
+              display: block;
+              padding: 5px 0;
+            }
+          }
         }
       }
       .header-nav-merchant {
@@ -206,15 +284,34 @@ export default {
         padding: 30px 36px 36px 47px;
         .header-jiulv {
           width: 234px;
+          dd {
+            float: left;
+            width: 33%;
+            text-align: center;
+          }
         }
         .header-meishi {
           width: 156px;
+          dd {
+            float: left;
+            width: 50%;
+            text-align: center;
+          }
         }
         .header-movie {
           width: 90px;
         }
         .header-app {
           float: right;
+          dd {
+            display: inline-block;
+            margin: 0 8px;
+            .appicon {
+              width: 60px;
+              height: 60px;
+              border: 0;
+            }
+          }
         }
       }
     }
