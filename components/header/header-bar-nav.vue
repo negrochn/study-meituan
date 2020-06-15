@@ -1,6 +1,6 @@
 <template>
-  <nav class="nav">
-    <ul class="nav-ul">
+  <nav class="header-bar-nav">
+    <ul class="header-nav-first">
       <li class="has-child" @mouseenter="isUserInfoShow = true" @mouseleave="isUserInfoShow = false">
         <nuxt-link to="/account/userinfo">
           我的美团
@@ -122,7 +122,7 @@
 
 <script>
 export default {
-  name: 'Nav',
+  name: 'HeaderBarNav',
   data () {
     return {
       isUserInfoShow: false,
@@ -192,9 +192,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav {
+.header-bar-nav {
   float: right;
-  .nav-ul {
+  .header-nav-first {
     margin: 0;
     padding: 0;
     a {

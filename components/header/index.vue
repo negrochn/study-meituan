@@ -2,27 +2,30 @@
   <header class="com-header">
     <div class="header-bar">
       <div class="header-content clearfix">
-        <Position />
-        <Nav />
+        <HeaderBarPosition />
+        <HeaderBarNav />
       </div>
     </div>
     <div class="header-content clearfix">
-      <TitleModule />
+      <HeaderTitleModule />
+      <HeaderSearchModule />
     </div>
   </header>
 </template>
 
 <script>
-import Position from './position'
-import Nav from './nav'
-import TitleModule from './title-module'
+import HeaderBarPosition from './header-bar-position'
+import HeaderBarNav from './header-bar-nav'
+import HeaderTitleModule from './header-title-module'
+import HeaderSearchModule from './header-search-module'
 
 export default {
   name: 'Header',
   components: {
-    Position,
-    Nav,
-    TitleModule
+    HeaderBarPosition,
+    HeaderBarNav,
+    HeaderTitleModule,
+    HeaderSearchModule
   }
 }
 </script>

@@ -40,6 +40,11 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 .com-header .icon-header_location:before {
   content: "\e60a";
 }
+.com-header .icon-search-new:before {
+  content: "\e618";
+  display: inline-block;
+  padding-top: 2px;
+}
 
 .clearfix:before, .clearfix:after {
   content: " ";

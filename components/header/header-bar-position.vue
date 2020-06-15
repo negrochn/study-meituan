@@ -1,5 +1,5 @@
 <template>
-  <div class="position">
+  <div class="header-bar-position">
     <!-- 定位图标 -->
     <span class="header-icon icon-header_location" />
     <!-- 当前城市 -->
@@ -36,12 +36,12 @@
 
 <script>
 export default {
-
+  name: 'HeaderBarPosition'
 }
 </script>
 
 <style lang="scss" scoped>
-.position {
+.header-bar-position {
   float: left;
   padding-top: 12px;
   a {
