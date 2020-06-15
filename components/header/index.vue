@@ -6,18 +6,23 @@
         <Nav />
       </div>
     </div>
+    <div class="header-content clearfix">
+      <TitleModule />
+    </div>
   </header>
 </template>
 
 <script>
 import Position from './position'
 import Nav from './nav'
+import TitleModule from './title-module'
 
 export default {
   name: 'Header',
   components: {
     Position,
-    Nav
+    Nav,
+    TitleModule
   }
 }
 </script>
