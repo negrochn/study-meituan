@@ -31,13 +31,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables.scss";
+
 .com-header {
   .header-bar {
     width: 100%;
     height: 40px;
-    background-color: #F8F8F8;
+    line-height: initial; // reset.css统一设置line-height: 1，此处需要重新设置
+    background-color: $background-color-base;
+    color: $color-text-secondary;
     font-size: 12px;
-    color: #999;
   }
   .header-content {
     margin: 0 auto;

@@ -1,0 +1,30 @@
+// Background Color
+$color-white: #FFF;
+$background-color-base: #F8F8F8;
+$background-color-heavy: #F4F4F4;
+$color-orange: #FFC300;
+
+// Font Color
+$color-text-primary: #222;
+$color-text-regular: #666;
+$color-text-secondary: #999;
+$color-text-placeholder: #999;
+$color-text-hover: #FE8C00;
+$color-text-span: #111; // 颜色差值跨度
+
+// Border Color
+$border-color-base: #E5E5E5;
+
+// @minxi
+$shadows: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+@mixin box-shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+@mixin a($color: $color-text-secondary, $color-hover: $color-text-hover) {
+  color: $color;
+  &:hover {
+    color: $color-hover;
+  }
+}

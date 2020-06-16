@@ -192,68 +192,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables.scss";
+
 .header-bar-nav {
   float: right;
   .header-nav-first {
-    margin: 0;
-    padding: 0;
-    a {
-      color: #999;
-        &:hover {
-          color: #FE8C00;
-        }
-    }
     & > li {
-      float: left;
       position: relative;
+      float: left;
       height: 40px;
       padding: 12px 14px;
       box-sizing: border-box;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
-      list-style: none;
-      & > span {
-        color: #999;
-        &:hover {
-          color: #FE8C00;
-        }
-      }
       .header-nav-second {
-        box-sizing: content-box;
+        @include box-shadow($shadows);
         position: absolute;
+        box-sizing: content-box;
         right: -1px;
         top: 95%;
-        margin: 0;
-        padding: 0;
         width: 100%;
-        background: #fff;
+        background: $color-white;
         text-align: center;
-        border: 1px solid #E5E5E5;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid $border-color-base;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         z-index: 1000;
         &:after {
           content: "";
-          background: #fff;
-          width: 76px;
-          height: 3px;
           position: absolute;
           top: -2px;
           right: 0;
+          width: 76px;
+          height: 3px;
+          background: $color-white;
         }
         li {
-          margin: 0;
-          padding: 0;
           text-align: center;
-          list-style: none;
           a {
             display: block;
             line-height: 35px;
-            color: #999;
-            &:hover {
-              color: #FE8C00;
-            }
           }
         }
         .header-nav-third {
@@ -261,7 +239,7 @@ export default {
           margin-right: 47px;
           dt {
             margin-bottom: 26px;
-            color: #222;
+            color: $color-text-primary;
             font-size: 14px;
             font-weight: 500;
           }
@@ -278,10 +256,10 @@ export default {
         border-top-left-radius: 4px;
       }
       .header-nav-site {
-        width: 1200px;
         box-sizing: border-box;
-        border-top-left-radius: 4px;
         padding: 30px 36px 36px 47px;
+        width: 1200px;
+        border-top-left-radius: 4px;
         .header-jiulv {
           width: 234px;
           dd {
@@ -317,9 +295,10 @@ export default {
     }
     & > .has-child {
       &:hover {
-        background-color: #fff;
-        border-color: #E5E5E5;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+        @include box-shadow($shadows);
+        background-color: $color-white;
+        color: $color-text-hover;
+        border-color: $border-color-base;
       }
     }
   }

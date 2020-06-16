@@ -79,83 +79,82 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables.scss";
+
 .header-search-module {
   position: absolute;
-  left: 50%;
   float: left;
+  left: 50%;
   padding-top: 28px;
   transform: translate(-50%);
   z-index: 999;
   .header-search-block {
     width: 550px;
     height: 40px;
-    background: #fff;
+    background: $color-white;
     .header-search-input {
       box-sizing: border-box;
+      padding: 15px;
       width: 85.45%;
       height: 100%;
       line-height: 100%;
-      padding: 15px;
-      font-size: 14px;
       background: transparent;
+      font-size: 14px;
       outline: none;
-      border: 1px solid #E5E5E5;
+      border: 1px solid $border-color-base;
       border-right: none;
       border-radius: 4px 0 0 4px;
       &::placeholder {
-        color: #999;
+        color: $color-text-placeholder;
       }
     }
     .header-search-btn {
-      box-sizing: border-box;
       float: right;
+      box-sizing: border-box;
       width: 14.55%;
       height: 100%;
       line-height: 100%;
-      background: #FFC300;
+      background: $color-orange;
       border: none;
+      color: $color-text-primary;
       outline: none;
-      color: #222222;
-      cursor: pointer;
       border-bottom-right-radius: 4px;
       border-top-right-radius: 4px;
+      cursor: pointer;
     }
   }
   .header-search-suggest {
-    box-sizing: border-box;
+    @include box-shadow($shadows);
     position: absolute;
+    box-sizing: border-box;
     width: 85.45%;
-    background: #fff;
-    border: 1px solid #E5E5E5;
+    background: $color-white;
+    border: 1px solid $border-color-base;
     border-top: none;
-    color: #999;
+    color: $color-text-secondary;
     font-size: 12px;
     text-align: left;
     z-index: 999;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     .header-search-noinput {
       padding: 10px;
+      line-height: initial; // reset.css统一设置line-height: 1，此处需要重新设置
     }
     .header-search-hasinput {
-      li {
-        list-style: none;
-      }
       a {
         display: block;
         padding: 3px 10px;
-        color: #333;
+        color: $color-text-primary + $color-text-primary;
         line-height: 1.6;
         cursor: pointer;
         &:hover {
-          background: #f8f8f8;
-          color: #FE8C00;
+          background: $background-color-base;
+          color: $color-text-hover;
         }
       }
     }
     h6 {
-      color: #999;
       font-size: 1em;
       font-weight: bold;
       padding-bottom: 5px;
@@ -183,14 +182,9 @@ export default {
         li {
           display: inline-block;
           margin-right: 10px;
-          color: #999;
           a {
+            @include a($color-text-regular);
             line-height: 1.6;
-            color: #666;
-            cursor: pointer;
-            &:hover {
-              color: #FE8C00;
-            }
           }
         }
       }

@@ -25,10 +25,14 @@
     <!-- 用户信息 -->
     <div class="user-entry">
       <div class="user-up">
-        <span>立即登录</span>
+        <nuxt-link to="/">
+          <span>立即登录</span>
+        </nuxt-link>
       </div>
       <div class="extra-entry">
-        <span>注册</span>
+        <nuxt-link to="/">
+          <span>注册</span>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -41,40 +45,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/css/variables.scss";
+
 .header-bar-position {
   float: left;
   padding-top: 12px;
-  a {
-    color: #999;
-    &:hover {
-      color: #FE8C00;
-    }
-  }
   .header-icon {
     font-size: 12px;
   }
   .current-city {
-    font-size: 12px;
-    color: #666;
+    color: $color-text-regular;
   }
   .change-city {
-    background: #F4F4F4;
-    border: 1px solid #E5E5E5;
-    border-radius: 2px;
-    color: #666;
     margin: 0 4px;
     padding: 0 2px;
+    background: $background-color-heavy;
+    border: 1px solid $border-color-base;
+    border-radius: 2px;
+    color: $color-text-regular;
+    // 由于设置了color，a的统一样式失效，需要重新设置a:hover
+    &:hover {
+      color: $color-text-hover;
+    }
   }
   .near-citys {
     display: inline-block;
     .city-guess {
       margin: 0 4px;
-      color: #999;
-    }
-    a:hover {
-      span {
-        color: #FE8C00;
-      }
     }
   }
   .user-entry {
@@ -83,16 +80,13 @@ export default {
     .user-up {
       display: inline;
       margin-left: 10px;
-      color: #FE8C00;
-      cursor: pointer;
+      a {
+        color: $color-text-hover; // 立即登录特殊处理
+      }
     }
     .extra-entry {
       display: inline;
       margin-left: 10px;
-      cursor: pointer;
-      span:hover {
-        color: #FE8C00;
-      }
     }
   }
 }

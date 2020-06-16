@@ -1,14 +1,17 @@
+@import './variables.scss';
+
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
+  background-color: $background-color-base;
   font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "MIcrosoft YaHei", sans-serif !important;
-  background-color: #F8F8F8;
+  -webkit-font-smoothing: antialiased;
 }
 
-blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
-  margin: 0;
-  padding: 0;
+.clearfix:before, .clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 @font-face {
@@ -26,9 +29,10 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
   url("~assets/font/iconfont-search.woff") format("woff"), /* chromeã€firefox */
   url("~assets/font/iconfont-search.ttf") format("truetype"); /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+ */
 }
+
 .com-header {
-  background: #fff;
-  box-shadow: 0 2px 27px 0 rgba(0,0,0,0.10);
+  @include box-shadow(0 2px 27px 0 rgba(0, 0, 0, 0.1));
+  background: $color-white;
 }
 .com-header .header-icon {
   font-family: "com_header" !important;
@@ -37,6 +41,8 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* iconfont 图标 */
 .com-header .icon-header_location:before {
   content: "\e60a";
 }
@@ -46,10 +52,6 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
   padding-top: 2px;
 }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
+a {
+  @include a();
 }
