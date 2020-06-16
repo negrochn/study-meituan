@@ -1,13 +1,20 @@
 <template>
   <div class="header-search-module">
     <div class="header-search-block">
-      <input class="header-search-input" type="text" placeholder="搜索商家或地点" @focus="isSuggestShow = true" @blur="onInputBlur">
+      <input
+        class="header-search-input"
+        type="text"
+        placeholder="搜索商家或地点"
+        @focus="isSuggestShow = true"
+        @blur="onBlur"
+        @keyup="onKeyup"
+      >
       <button class="header-search-btn">
         <span class="header-icon icon-search-new" />
       </button>
     </div>
     <div v-show="isSuggestShow" class="header-search-suggest">
-      <div class="header-search-noinput">
+      <div v-show="!hasInput" class="header-search-noinput">
         <div class="header-search-history">
           <h6>最近搜索</h6>
           <span class="header-search-clean">删除搜索历史</span>
@@ -22,7 +29,15 @@
         <h6>热门搜索</h6>
         <div class="header-search-hotword" />
       </div>
-      <div class="header-search-hasinput" />
+      <div v-show="hasInput" class="header-search-hasinput">
+        <ul>
+          <li v-for="item in searchResult" :key="item.label">
+            <nuxt-link :to="item.path">
+              {{ item.label }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="header-search-hotword" />
   </div>
@@ -41,14 +56,23 @@ export default {
         { label: '东极岛', path: '/' },
         { label: '杭州花圃', path: '/' },
         { label: '法喜寺', path: '/' }
+      ],
+      hasInput: false,
+      searchResult: [
+        { label: '杭州花圃', path: '/' },
+        { label: '杭州花圃公交站', path: '/' },
+        { label: '杭州花圃景区停车场', path: '/' }
       ]
     }
   },
   methods: {
-    onInputBlur () {
+    onBlur () {
       setTimeout(() => {
         this.isSuggestShow = false
       }, 100)
+    },
+    onKeyup (e) {
+      this.hasInput = Boolean(e.target.value)
     }
   }
 }
@@ -114,6 +138,22 @@ export default {
     .header-search-noinput {
       padding: 10px;
     }
+    .header-search-hasinput {
+      li {
+        list-style: none;
+      }
+      a {
+        display: block;
+        padding: 3px 10px;
+        color: #333;
+        line-height: 1.6;
+        cursor: pointer;
+        &:hover {
+          background: #f8f8f8;
+          color: #FE8C00;
+        }
+      }
+    }
     h6 {
       color: #999;
       font-size: 1em;
@@ -155,6 +195,15 @@ export default {
         }
       }
     }
+  }
+  .header-search-hotword {
+    box-sizing: border-box;
+    padding-top: 8px;
+    padding-left: 12px;
+    width: 550px;
+    height: 25px;
+    text-align: left;
+    overflow: hidden;
   }
 }
 </style>
