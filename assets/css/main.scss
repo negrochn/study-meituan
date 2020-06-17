@@ -55,3 +55,139 @@ body {
 a {
   @include a();
 }
+
+@font-face {
+  font-family: 'iconfontNew';
+  src: url('~assets/font/iconfontNew.eot');
+  src: url('~assets/font/iconfontNew.eot?#iefix') format('embedded-opentype'),
+      url('~assets/font/iconfontNew.woff') format('woff'),
+      url('~assets/font/iconfontNew.ttf') format('truetype'),
+      url('~assets/font/iconfontNew.svg#iconfont') format('svg');
+}
+
+.iconfontNew {
+  font-family: "iconfontNew" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hc-icon-foodNew:before {
+  content: '\e60e';
+  color: #FF8200;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-hotelNew:before {
+  content: '\e616';
+  color: #9B5E3E;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-maoyanNew:before {
+  content: '\e612';
+  color: #FF3D00;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-ktvNew:before {
+  content: '\e607';
+  color: #00BF96;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-zhenguoNew:before {
+  content: '\e60c';
+  color: #FFB500;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-beautyNew:before {
+  content: '\e60f';
+  color: #FF4081;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-marriedNew:before {
+  content: '\e609';
+  color: #FF4081;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-childNew:before {
+  content: '\e608';
+  color: #FF4081;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-sportNew:before {
+  content: '\e611';
+  color: #03A9F4;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-decorateNew:before {
+  content: '\e60b';
+  color: #00BF96;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-educationNew:before {
+  content: '\e610';
+  color: #00BF96;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-medicalNew:before {
+  content: '\e60d';
+  color: #03A9F4;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-barNew:before {
+  content: '\e606';
+  color: #00BF96;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-waimaiNew:before {
+  content: '\e60a';
+  color: #FFB500;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-planeNew:before {
+  content: '\e615';
+  color: #03A9F4;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-lifeNew:before {
+  content: '\e614';
+  color: #00BF96;
+  vertical-align: middle;
+  line-height: 18px;
+}
+
+.hc-icon-travelNew:before {
+  content: '\e613';
+  color: #03A9F4;
+  vertical-align: middle;
+  line-height: 18px;
+}
