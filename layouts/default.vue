@@ -9,6 +9,7 @@
 import Header from '@/components/header'
 
 export default {
+  name: 'LayoutsDefault',
   components: {
     Header
   }
