@@ -35,10 +35,11 @@
               </h2>
               <nuxt-link :to="item.path" class="detail-more">
                 更多
+                <i class="detail-right-arrow" />
               </nuxt-link>
             </div>
             <div class="detail-content">
-              <nuxt-link v-for="itm in item.types" :key="itm.label" :to="itm.path">
+              <nuxt-link v-for="itm in item.types" :key="itm.label" :to="itm.path" class="detail-text">
                 {{ itm.label }}
               </nuxt-link>
             </div>
@@ -813,6 +814,35 @@ export default {
           font-size: 16px;
           font-weight: 500;
           color: $color-text-primary;
+        }
+        .detail-more {
+          position: relative;
+          float: right;
+          margin-right: 6px;
+          font-size: 12px;
+          color: $color-text-secondary;
+        }
+        .detail-right-arrow {
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          right: -6px;
+          margin: auto;
+          width: 4px;
+          height: 4px;
+          border-bottom: 1px solid #999;
+          border-right: 1px solid #999;
+          transform: rotate(-45deg);
+        }
+      }
+      .detail-content {
+        .detail-text {
+          display: inline-block;
+          margin-top: 10px;
+          margin-right: 16px;
+          line-height: 15px;
+          font-size: 12px;
         }
       }
     }
