@@ -6,7 +6,7 @@
         <span class="title-icon" />
       </div>
       <div class="category-nav-content-wrapper">
-        <ul @mouseover="onMouseOver" @mouseleave="onMouseLeave">
+        <ul @mousemove="onMouseMove" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
           <li v-for="item in navList" :key="item.id" class="nav-li">
             <i :class="`iconfontNew hc-icon-${item.id}`" />
             <span class="nav-text-wrapper">
@@ -24,16 +24,16 @@
           </li>
         </ul>
       </div>
-      <div v-show="isDetailShow" class="category-nav-detail-wrapper" @mouseenter="onDetailMouseEnter" @mouseleave="onDetailMouseLeave">
+      <div v-show="isDetailShow" class="category-nav-detail-wrapper" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
         <div class="category-nav-detail">
           <div v-for="item in detailList" :key="item.label" class="detail-area">
             <div class="detail-title-wrapper clearfix">
               <h2>
-                <nuxt-link :to="item.path">
+                <nuxt-link :to="item.path" class="detail-title">
                   {{ item.label }}
                 </nuxt-link>
               </h2>
-              <nuxt-link :to="item.path">
+              <nuxt-link :to="item.path" class="detail-more">
                 更多
               </nuxt-link>
             </div>
@@ -51,6 +51,17 @@
 
 <script>
 import _ from 'lodash'
+
+const debounced = _.debounce(function (e) {
+  const pageY = e.pageY
+  const diffY = 208
+  const height = 26
+  const index = Math.floor((pageY - diffY) / height)
+  this.curNav = index > -1 ? this.navList[index].id : ''
+}, 50, {
+  leading: false,
+  trailing: true
+})
 
 export default {
   name: 'LeftBanner',
@@ -661,24 +672,16 @@ export default {
     }
   },
   methods: {
+    onMouseEnter () {
+      clearTimeout(this.timer)
+    },
     onMouseLeave () {
+      debounced.cancel()
       this.timer = setTimeout(() => {
         this.curNav = ''
       }, 100)
     },
-    onMouseOver: _.throttle(function (e) {
-      // console.log(e.pageY)
-    }, 200, {
-      leading: true,
-      trailing: true
-    }),
-    onDetailMouseEnter () {
-    },
-    onDetailMouseLeave () {
-      this.timer = setTimeout(() => {
-        this.curNav = ''
-      })
-    }
+    onMouseMove: debounced
   }
 }
 </script>
@@ -796,6 +799,22 @@ export default {
       border-radius: 10px;
       transform: scale(.9);
       opacity: 1;
+    }
+    .detail-area {
+      padding: 0 30px;
+      .detail-title-wrapper {
+        margin-top: 24px;
+        height: 22px;
+        line-height: 22px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-color-base;
+        .detail-title {
+          float: left;
+          font-size: 16px;
+          font-weight: 500;
+          color: $color-text-primary;
+        }
+      }
     }
   }
 }
