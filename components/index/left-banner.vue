@@ -732,6 +732,7 @@ export default {
       background: $color-white;
       color: $color-text-regular;
       overflow: hidden;
+      z-index: 199;
     }
     .nav-li {
       position: relative;
