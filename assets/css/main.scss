@@ -191,3 +191,28 @@ a {
   vertical-align: middle;
   line-height: 18px;
 }
+
+@font-face {
+  font-family: "iconfont";
+  src: url('~assets/font/iconfont.eot?t=1500964529975'); /* IE9*/
+  src: url('~assets/font/iconfont.eot?t=1500964529975#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('~assets/font/iconfont.woff?t=1500964529975') format('woff'), /* chrome, firefox */
+  url('~assets/font/iconfont.ttf?t=1500964529975') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('~assets/font/iconfont.svg?t=1500964529975#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-btn_left:before {
+  content: "\e608";
+}
+
+.icon-btn_right:before {
+  content: "\e609";
+}

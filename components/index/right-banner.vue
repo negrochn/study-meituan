@@ -98,9 +98,9 @@ export default {
       float: left;
     }
     .banner-slider {
+      position: relative;
       width: 550px;
       height: 240px;
-      background: #ccc;
     }
     .pic-1 {
       margin: 0 10px;
