@@ -10,11 +10,11 @@
         <BannerSlider />
       </div>
       <nuxt-link to="/xiuxianyule">
-        <div class="item shadow pic-1" />
+        <div style="background-image: url(http://p0.meituan.net/codeman/e473bb428f070321269b23370ff02ba956209.jpg);" class="item shadow pic-1" />
       </nuxt-link>
       <div class="item banner-logincard">
-        <div>
-          <div class="login-container" />
+        <div style="float: left;">
+          <BannerLogin />
         </div>
       </div>
     </div>
@@ -35,11 +35,13 @@
 
 <script>
 import BannerSlider from './banner-slider'
+import BannerLogin from './banner-login'
 
 export default {
   name: 'RightBanner',
   components: {
-    BannerSlider
+    BannerSlider,
+    BannerLogin
   },
   data () {
     return {
@@ -107,6 +109,10 @@ export default {
       width: 150px;
       height: 240px;
       background: #ccc;
+      background-size: 150px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-color: $color-white;
     }
     .pic-2, .pic-3 {
       margin-top: 10px;
@@ -136,12 +142,6 @@ export default {
   .shadow:hover {
     box-shadow: 0 5px 16px 0 rgab(0, 0, 0, .15);
     transition: box-shadow .5s;
-  }
-  .login-container {
-    width: 228px;
-    height: 238px;
-    background: $color-white;
-    border: 1px solid $border-color-base;
   }
 }
 </style>
