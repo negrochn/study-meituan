@@ -20,15 +20,26 @@
     </div>
     <div class="banner-row clearfix">
       <nuxt-link to="/hotel">
-        <div class="item shadow pic-2" />
+        <div style="background-image: url(http://p1.meituan.net/codeman/8cce56c467a17e04f3094d1e455462a0132772.png);" class="item shadow pic-2" />
       </nuxt-link>
       <nuxt-link to="/jiaoyupeixun">
-        <div class="item shadow pic-3" />
+        <div style="background-image: url(http://p1.meituan.net/codeman/16442c19da1f1c4544f794e29d99c92051716.jpg);" class="item shadow pic-3" />
       </nuxt-link>
       <nuxt-link to="/">
-        <div class="item shadow pic-4" />
+        <div style="background-image: url(http://p1.meituan.net/codeman/5b21cddb4bb1cbc3a9c3bce0f726c75940469.jpg);" class="item shadow pic-4" />
       </nuxt-link>
-      <div class="item download-app" />
+      <div class="item download-app">
+        <div class="qrcode-box">
+          <img src="//s1.meituan.net/bs/fe-web-meituan/60ac9a0/img/download-qr.png" alt="下载APP">
+        </div>
+        <p class="app-name">
+          美团APP手机版
+        </p>
+        <p class="sl">
+          <span class="red">1元起</span>
+          <span class="gary">吃喝玩乐</span>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -119,14 +130,19 @@ export default {
       margin-right: 10px;
       width: 270px;
       height: 165px;
-      background: #ccc;
+      background-size: 270px;
+      background-position: 50%;
+      background-repeat: no-repeat;
     }
     .pic-4 {
       width: 150px;
       height: 165px;
       margin-top: 10px;
       margin-right: 10px;
-      background: #ccc;
+      background-size: 150px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-color: $color-white;
     }
     .download-app {
       margin-top: 10px;
@@ -134,6 +150,33 @@ export default {
       height: 165px;
       background: #fff;
       border: 1px solid $border-color-base;
+      .qrcode-box {
+        margin: 10px auto 0;
+        text-align: center;
+        img {
+          width: 95px;
+          height: 95px;
+        }
+      }
+      .app-name {
+        font-size: 16px;
+        color: $color-text-primary;
+        font-weight: 500;
+        text-align: center;
+      }
+      .sl {
+        margin-top: 2px;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .red {
+        margin-right: 5px;
+        color: #EC5330;
+      }
+      .gary {
+        color: #3f3f3f;
+      }
     }
   }
   .shadow {
