@@ -3,6 +3,7 @@
     <div class="index-container">
       <Banner />
       <Maoyan />
+      <Zhenguo />
     </div>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Banner from '@/components/index/banner'
 import Maoyan from '@/components/index/maoyan'
+import Zhenguo from '@/components/index/zhenguo'
 
 export default {
   name: 'Index',
   components: {
     Banner,
-    Maoyan
+    Maoyan,
+    Zhenguo
   }
 }
 </script>
