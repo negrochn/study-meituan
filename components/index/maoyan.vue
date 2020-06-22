@@ -22,7 +22,7 @@
       <div class="coming-container">
         <div>
           <div class="slider">
-            <div style="left: 0px; margin: 0 12px;" class="slider-content clearfix">
+            <div :style="`left: ${sliderContentLeft}px; margin: 0 12px;`" class="slider-content clearfix">
               <div v-for="film in comingFilmList" :key="film.path" class="slider-item-film">
                 <nuxt-link :to="film.path">
                   <img :src="film.imgSrc" alt="" class="image film-img">
@@ -40,10 +40,10 @@
                 </nuxt-link>
               </div>
             </div>
-            <div class="btn btn-next">
+            <div style="right: 0;" class="btn btn-next" @click="onNextClick">
               <i class="iconfont icon-btn_right" />
             </div>
-            <div class="btn btn-pre">
+            <div style="left: 0;" class="btn btn-pre" @click="onPreClick">
               <i class="iconfont icon-btn_left" />
             </div>
           </div>
@@ -120,7 +120,25 @@ export default {
           imgSrc: '//p0.meituan.net/movie/d8bba55fde322a809b6eeb95ddbffec82554093.jpg@214w_297h_1e_1c',
           wishNum: 9720
         }
-      ]
+      ],
+      sliderContentLeft: 0
+    }
+  },
+  methods: {
+    slide (step = 1165) {
+      const length = this.comingFilmList.length
+      const filmWidth = (214 + 19) * length
+      const computedWidth = this.sliderContentLeft - step
+      // 限制上一页下一页仅在有效的范围内点击
+      if (computedWidth <= 0 && Math.abs(computedWidth) < filmWidth) {
+        this.sliderContentLeft = computedWidth
+      }
+    },
+    onNextClick () {
+      this.slide()
+    },
+    onPreClick () {
+      this.slide(-1165)
     }
   }
 }
@@ -182,10 +200,6 @@ export default {
   .mf-shang-hei-regular {
     font-family: "MFShangHei-Regular" !important;
   }
-  .scenes-body {
-    .coming-container {
-    }
-  }
   .slider {
     position: relative;
     width: 100%;
@@ -243,6 +257,31 @@ export default {
             text-overflow: ellipsis;
           }
         }
+      }
+    }
+    .btn {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #333;
+      top: 43%;
+      text-align: center;
+      border-radius: 40px;
+      transition: opacity .5s;
+      transform: scale(.95);
+      opacity: 0;
+      cursor: pointer;
+      .iconfont {
+        line-height: 40px;
+        font-size: 20px;
+        color: $color-white;
+        text-align: center;
+      }
+    }
+    &:hover {
+      .btn {
+        opacity: .8;
+        transition: opacity .5s;
       }
     }
   }
