@@ -16,7 +16,37 @@
         </li>
       </ul>
     </div>
-    <div class="minsu-ls-view clearfix" />
+    <div class="minsu-ls-view clearfix">
+      <div class="products">
+        <div class="minsu-item">
+          <nuxt-link to="/">
+            <div class="product-card-header">
+              <img src="" alt="" class="product-img">
+              <img src="" alt="" class="head-img">
+            </div>
+            <div class="product-info">
+              <p class="product-title" />
+              <p class="sub-title">
+                <span>
+                  整套
+                  1居室·
+                </span>
+                <span>
+                  可住
+                  2
+                  人 |
+                </span>
+                <span>迪士尼度假区</span>
+              </p>
+              <p class="price-number numfont price">
+                <span class="price-icon">￥</span>
+                199
+              </p>
+            </div>
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -641,22 +671,410 @@ export default {
         {
           city: '福州',
           cityId: 350100,
-          productList: []
+          productList: [
+            {
+              productId: '11669334',
+              price: 158,
+              hostAvatarUrl: null,
+              title: '福州南站ins风轻奢舒适双床房',
+              rentType: 0,
+              layoutRoom: 2,
+              maxGuestNumber: 4,
+              locationArea: '火车南站',
+              starRating: 45,
+              commentNumber: null,
+              coverImage: 'https://img.meituan.net/phoenix/9f094ac829ff9fb819da3bc4d27bc0172938534.jpg',
+              favCount: 6,
+              poiId: '1434600195',
+              dpPoiId: '1434600195'
+            },
+            {
+              productId: '10548734',
+              price: 188,
+              hostAvatarUrl: null,
+              title: '福州火车南站温馨舒适ins公寓民宿',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 3,
+              locationArea: '火车南站',
+              starRating: 50,
+              commentNumber: 10,
+              coverImage: 'https://img.meituan.net/phoenix/3472514dd67c36fee86f3a68e69f78c02030477.jpg',
+              favCount: 47,
+              poiId: '677252519',
+              dpPoiId: '677252519'
+            },
+            {
+              productId: '10624455',
+              price: 208,
+              hostAvatarUrl: null,
+              title: '达道地铁口 上下杭 宝龙 中亭街 三坊七巷 高层现代风 百寸高清投影 整套公寓 新房特惠',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '时代名城/文化宫',
+              starRating: 48,
+              commentNumber: 12,
+              coverImage: 'https://img.meituan.net/phoenix/68304af494db3b1b5b589628abb16649224874.jpg',
+              favCount: 108,
+              poiId: '525317699',
+              dpPoiId: '525317699'
+            },
+            {
+              productId: '2721566',
+              price: 118,
+              hostAvatarUrl: null,
+              title: '博仕后天小鹅爱情主题房',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '福州大学城',
+              starRating: 50,
+              commentNumber: 5,
+              coverImage: 'https://img.meituan.net/iphoenix/83b59f4c1b4788f61cda2b7a5bbb8ae292543.jpg',
+              favCount: 131,
+              poiId: '174856395',
+              dpPoiId: '107700136'
+            },
+            {
+              productId: '10789872',
+              price: 99,
+              hostAvatarUrl: null,
+              title: '『一舍』民宿 繁心 永嘉天地',
+              rentType: 1,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '福州大学城',
+              starRating: 45,
+              commentNumber: null,
+              coverImage: 'https://img.meituan.net/phoenix/665aa16de1ea35f555c63f88647ca713727759.jpg',
+              favCount: 43,
+              poiId: '1143981578',
+              dpPoiId: '1143981578'
+            },
+            {
+              productId: '8284663',
+              price: 198,
+              hostAvatarUrl: null,
+              title: '上下杭环面阳光清新房/近中亭街宝龙/近地铁',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '时代名城/文化宫',
+              starRating: 47,
+              commentNumber: 3,
+              coverImage: 'https://img.meituan.net/phoenix/30a22945aa46aab32ea44c46c21def75999856.jpg',
+              favCount: 114,
+              poiId: '1678415696',
+              dpPoiId: '1678415696'
+            }
+          ]
         },
         {
           city: '无锡',
           cityId: 320200,
-          productList: []
+          productList: [
+            {
+              productId: '10689092',
+              price: 80,
+              hostAvatarUrl: null,
+              title: '雪溪苑简约欧式1.8米大床房/恒华科技园旁边/融创乐园/华莱坞影视基地/设施齐全/交通方便',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '无锡太湖风景区',
+              starRating: 50,
+              commentNumber: 3,
+              coverImage: 'http://p1.meituan.net/iphoenix/1b2560471381e0edb0fb38ccec60d11c715047.jpg',
+              favCount: 46,
+              poiId: '502229807',
+              dpPoiId: '502229807'
+            },
+            {
+              productId: '9182663',
+              price: 229,
+              hostAvatarUrl: null,
+              title: 'Ag灰调  临融创茂、江南大学、三国城、雪浪山',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '无锡太湖风景区',
+              starRating: 50,
+              commentNumber: 6,
+              coverImage: 'https://img.meituan.net/phoenix/1e0dd56bdef6ea43a3435955df3deaa3739540.jpg',
+              favCount: 129,
+              poiId: '642111505',
+              dpPoiId: '642111505'
+            },
+            {
+              productId: '10631149',
+              price: 138,
+              hostAvatarUrl: null,
+              title: '【听雨民宿】红星大都汇超现代一居',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '无锡太湖风景区',
+              starRating: 50,
+              commentNumber: 10,
+              coverImage: 'https://img.meituan.net/phoenix/077adc10aa4ced60c78ec146d2cd5420669762.jpg',
+              favCount: 62,
+              poiId: '1866511100',
+              dpPoiId: '1866511100'
+            },
+            {
+              productId: '10676126',
+              price: 75,
+              hostAvatarUrl: null,
+              title: '简约大床房/设施齐全/性价比高',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '工业园区',
+              starRating: 45,
+              commentNumber: 23,
+              coverImage: 'http://p0.meituan.net/iphoenix/fff7ddde154a734eed234a5ecbace0541082821.jpg',
+              favCount: 168,
+              poiId: '1540307230',
+              dpPoiId: '1540307230'
+            },
+            {
+              productId: '8688584',
+              price: 168,
+              hostAvatarUrl: null,
+              title: '【半糖主义】近酒吧街 地铁站 火车站旁 巨幕投影',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '南禅寺/中山路/南长街',
+              starRating: 48,
+              commentNumber: 24,
+              coverImage: 'https://img.meituan.net/phoenix/17e9096cf9e86af848b0fd451f351cfc743545.jpg',
+              favCount: 278,
+              poiId: '857879279',
+              dpPoiId: '857879279'
+            },
+            {
+              productId: '8824133',
+              price: 159,
+              hostAvatarUrl: null,
+              title: '【海盐】投影美居｜一号线｜江南大学｜长广溪｜文旅城',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '无锡太湖风景区',
+              starRating: 46,
+              commentNumber: 12,
+              coverImage: 'https://img.meituan.net/phoenix/b7fa06ac993893703898b90bc2ca10c14128537.jpg',
+              favCount: 66,
+              poiId: '1690747119',
+              dpPoiId: '1690747119'
+            }
+          ]
         },
         {
           city: '扬州',
           cityId: 321000,
-          productList: []
+          productList: [
+            {
+              productId: '6283769',
+              price: 138,
+              hostAvatarUrl: null,
+              title: '【秋舍】之暖暖one，独立公寓超大落地窗，双人大床，小米电视，冰箱，洗衣机，免费饮料和小食，一次性马桶垫，洗衣液。',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '江阳路-开发路',
+              starRating: 50,
+              commentNumber: 31,
+              coverImage: 'https://img.meituan.net/phoenix/4ebeb19c1ff5c0629bc6d98e822231c95460625.jpg',
+              favCount: 324,
+              poiId: '193121742',
+              dpPoiId: '130160646'
+            },
+            {
+              productId: '8632786',
+              price: 168,
+              hostAvatarUrl: null,
+              title: '皮市街特色四合院民宿有天台院子落地窗大床房',
+              rentType: 1,
+              layoutRoom: 2,
+              maxGuestNumber: 2,
+              locationArea: '何园-1912街区',
+              starRating: 46,
+              commentNumber: 4,
+              coverImage: 'https://img.meituan.net/iphoenix/d400ca004d5fef82da9f172ae9dcf2a42495277.jpg',
+              favCount: 37,
+              poiId: '1314174747',
+              dpPoiId: '1314174747'
+            },
+            {
+              productId: '6178417',
+              price: 145,
+              hostAvatarUrl: null,
+              title: '明亮舒适·大床房·东关街/个园/古运河畔/瘦西湖附近，位置优越，可停车',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 3,
+              locationArea: '梅岭',
+              starRating: 49,
+              commentNumber: 32,
+              coverImage: 'http://p1.meituan.net/iphoenix/0203b4af64d27cb0da1f53f17fc5a32c3576576.jpg',
+              favCount: 129,
+              poiId: '192283335',
+              dpPoiId: '129430973'
+            },
+            {
+              productId: '2930341',
+              price: 148,
+              hostAvatarUrl: null,
+              title: '扬州瘦西湖/万达笙箫风情投影客栈-1',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场',
+              starRating: 50,
+              commentNumber: 101,
+              coverImage: 'https://img.meituan.net/phoenix/9bec08c16e8a91aad0565f93015e515f2968936.jpg',
+              favCount: 597,
+              poiId: '182453346',
+              dpPoiId: '114897866'
+            },
+            {
+              productId: '7282067',
+              price: 148,
+              hostAvatarUrl: null,
+              title: '[尊品民宿]万达广场旁真皮大床独立吧区/瘦西湖/东关街/个园/何园直达密码自助',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场',
+              starRating: 50,
+              commentNumber: 38,
+              coverImage: 'https://img.meituan.net/phoenix/9fe1d54b83ffb2268277289f36d8d787359472.jpg',
+              favCount: 240,
+              poiId: '194636795',
+              dpPoiId: '131661719'
+            },
+            {
+              productId: '2926855',
+              price: 158,
+              hostAvatarUrl: null,
+              title: '古  月   家 Rainbow’s公馆.万达店。长租价更优',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场',
+              starRating: 47,
+              commentNumber: 41,
+              coverImage: 'http://p0.meituan.net/phoenix/774e888cb0f2a7608bf0d9dfd31391fc1222132.jpg',
+              favCount: 434,
+              poiId: '182130010',
+              dpPoiId: '114553162'
+            }
+          ]
         },
         {
           city: '嘉兴',
           cityId: 330400,
-          productList: []
+          productList: [
+            {
+              productId: '2767171',
+              price: 148,
+              hostAvatarUrl: null,
+              title: '已消毒  万达广场正青春寓所  免费停车  情侣入住  南湖景区  高中园区',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场/动植物园',
+              starRating: 49,
+              commentNumber: 55,
+              coverImage: 'https://img.meituan.net/phoenix/23b8db3c215f0644f56193fdb4815aa7855059.jpg',
+              favCount: 315,
+              poiId: '180075676',
+              dpPoiId: '112628938'
+            },
+            {
+              productId: '10470031',
+              price: 115,
+              hostAvatarUrl: null,
+              title: '（已消毒）乌镇西栅景区for水木年华（部分临河）大床房/情侣出游/免费接送/免费停车/汉服租赁打折/可开发票/游玩攻略',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '乌镇',
+              starRating: 50,
+              commentNumber: 50,
+              coverImage: 'https://img.meituan.net/phoenix/7566c634940ff75b7ef9b1bcfc8aefc4318860.jpg',
+              favCount: 2115,
+              poiId: '1587170814',
+              dpPoiId: '1587170814'
+            },
+            {
+              productId: '10643998',
+              price: 228,
+              hostAvatarUrl: null,
+              title: '可做饭南都大厦嘉一医院，嘉兴学院附近八佰伴银泰百货万达广场一室一厅一卫',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 3,
+              locationArea: '第一医院',
+              starRating: 48,
+              commentNumber: 11,
+              coverImage: 'https://img.meituan.net/phoenix/91264a67fc3ce438fc92168607b20214724890.jpg',
+              favCount: 75,
+              poiId: '881272212',
+              dpPoiId: '881272212'
+            },
+            {
+              productId: '4470884',
+              price: 128,
+              hostAvatarUrl: null,
+              title: '万达广场羽霓同行温馨小屋',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场/动植物园',
+              starRating: 45,
+              commentNumber: 4,
+              coverImage: 'https://img.meituan.net/phoenix/8051af9afe422123927d43e5a808fac0700081.jpg',
+              favCount: 88,
+              poiId: '560016948',
+              dpPoiId: '560016948'
+            },
+            {
+              productId: '2715219',
+              price: 178,
+              hostAvatarUrl: null,
+              title: '已消毒  万达广场森林风情寓所  情侣入住   同济大学嘉兴分院   高中园区',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '万达广场/动植物园',
+              starRating: 49,
+              commentNumber: 26,
+              coverImage: 'http://p1.meituan.net/phoenix/93e2f50fb350df798bfa6b929602703b292322.jpg',
+              favCount: 282,
+              poiId: '179945333',
+              dpPoiId: '112510956'
+            },
+            {
+              productId: '9096245',
+              price: 128,
+              hostAvatarUrl: null,
+              title: '「乔溪·半岛」乌镇近景区|西栅景区入口100米|交通方便|街景夜景',
+              rentType: 0,
+              layoutRoom: 1,
+              maxGuestNumber: 2,
+              locationArea: '乌镇',
+              starRating: 50,
+              commentNumber: 7,
+              coverImage: 'https://img.meituan.net/iphoenix/9f98f5bc732b21918eb1ca2342863f4c574853.jpg',
+              favCount: 197,
+              poiId: '764718811',
+              dpPoiId: '764718811'
+            }
+          ]
         }
       ]
     }
@@ -719,6 +1137,16 @@ export default {
   }
   .mf-shang-hei-regular {
     font-family: "MFShangHei-Regular" !important;
+  }
+  .minsu-ls-view {
+    padding: 20px;
+    padding-right: 0;
+    padding-bottom: 0;
+    background: $color-white;
+    border: 1px solid $border-color-base;
+    border-top: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 }
 </style>
