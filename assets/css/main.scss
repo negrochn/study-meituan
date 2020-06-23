@@ -227,3 +227,20 @@ a {
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "numbers";
+  src: url("~assets/font/numbers.eot"); /* IE9 */
+  src: url("~assets/font/numbers.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+  url("~assets/font/numbers.woff") format("woff"), /* chrome、firefox */
+  url("~assets/font/numbers.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+  font-style: normal;
+  font-weight: normal;
+}
+
+.numfont {
+  font-family: "numbers" !important;
+  letter-spacing: -0.5px;
+}
