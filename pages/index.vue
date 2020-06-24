@@ -4,6 +4,7 @@
       <Banner />
       <Maoyan />
       <Zhenguo />
+      <Recommend />
     </div>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import Banner from '@/components/index/banner'
 import Maoyan from '@/components/index/maoyan'
 import Zhenguo from '@/components/index/zhenguo'
+import Recommend from '@/components/index/recommend'
 
 export default {
   name: 'Index',
   components: {
     Banner,
     Maoyan,
-    Zhenguo
+    Zhenguo,
+    Recommend
   }
 }
 </script>
