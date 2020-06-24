@@ -17,8 +17,8 @@
       </ul>
     </div>
     <div class="minsu-ls-view clearfix">
-      <div class="products">
-        <div v-for="product in productList" :key="product.productId" class="minsu-item">
+      <div v-for="item in minsuList" :key="item.productId" :style="`display: ${curCity === item.city ? 'flex' : 'none'};`" class="products">
+        <div v-for="product in item.productList" :key="product.productId" class="minsu-item">
           <nuxt-link to="/">
             <div class="product-card-header">
               <img :src="product.coverImage" alt="" class="product-img">
