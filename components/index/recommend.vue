@@ -22,8 +22,20 @@
                 {{ recommend.title }}
               </div>
               <div class="score-line aligned" />
-              <div class="desc-line aligned" />
-              <div class="bottom-line aligned" />
+              <div class="desc-line aligned">
+                <div class="desc">
+                  {{ recommend.areaName }}
+                </div>
+              </div>
+              <div class="bottom-line aligned">
+                <div class="price-box">
+                  <span>
+                    <span class="yuan">￥</span>
+                    <span class="price-number numfont">{{ recommend.lowPrice }}</span>
+                    <span class="price-desc">起</span>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -409,6 +421,65 @@ export default {
       img {
         width: 100%;
         font-size: 0;
+      }
+    }
+    .info-box {
+      position: relative;
+      margin-top: 10px;
+      .title {
+        margin: 0;
+        width: 100%;
+        line-height: 20px;
+        font-size: 14px;
+        color: $color-text-primary;
+        font-weight: 500;
+      }
+      .title.aligned {
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .desc-line.aligned {
+        height: 18px;
+        .desc {
+          margin-top: 4px;
+          width: 100%;
+          height: 18px;
+          line-height: 18px;
+          font-size: 12px;
+          color: $color-text-secondary;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .bottom-line {
+        .price-box {
+          color: #FF6600;
+          .yuan {
+            font-size: 14px;
+            font-weight: 700;
+          }
+          .price-number {
+            font-size: 22px;
+            letter-spacing: .5;
+          }
+          .price-desc {
+            margin-left: 4px;
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+        div {
+          display: inline-block;
+        }
+      }
+      .bottom-line.aligned {
+        height: 28px;
       }
     }
   }
