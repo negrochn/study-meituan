@@ -21,9 +21,14 @@
               <div :title="recommend.title" class="title aligned">
                 {{ recommend.title }}
               </div>
-              <div class="score-line aligned" />
+              <div class="score-line aligned">
+                <Score :score="recommend.score" />
+                <div class="comment-number">
+                  {{ recommend.commentNum }}个评价
+                </div>
+              </div>
               <div class="desc-line aligned">
-                <div class="desc">
+                <div v-if="recommend.areaName" class="desc">
                   {{ recommend.areaName }}
                 </div>
               </div>
@@ -45,8 +50,13 @@
 </template>
 
 <script>
+import Score from './score'
+
 export default {
   name: 'Recommend',
+  components: {
+    Score
+  },
   data () {
     return {
       recommendList: [
@@ -99,7 +109,7 @@ export default {
           areaName: '下沙宝龙城市广场',
           lowPrice: '35.0',
           saleNum: null,
-          commentNum: 1822,
+          commentNum: 1821,
           detailUrl: '',
           firstCate: [
             20611,
@@ -136,7 +146,7 @@ export default {
           areaName: '宝龙城市广场',
           lowPrice: '64.0',
           saleNum: null,
-          commentNum: 13460,
+          commentNum: 13511,
           detailUrl: '',
           firstCate: [
             1,
@@ -155,7 +165,7 @@ export default {
           areaName: '西湖文化广场',
           lowPrice: '28.0',
           saleNum: null,
-          commentNum: 895,
+          commentNum: 902,
           detailUrl: '',
           firstCate: [
             20611,
@@ -163,7 +173,7 @@ export default {
             20630,
             20426
           ],
-          avgPrice: 225
+          avgPrice: 231
         },
         {
           itemId: '4085553',
@@ -174,7 +184,7 @@ export default {
           areaName: '星耀城',
           lowPrice: '89.0',
           saleNum: null,
-          commentNum: 4154,
+          commentNum: 4164,
           detailUrl: '',
           firstCate: [
             2,
@@ -182,13 +192,13 @@ export default {
             20611,
             20426
           ],
-          avgPrice: 253
+          avgPrice: 254
         },
         {
           itemId: '2749994',
           title: '可莎蜜兒（临平2店）',
           imgUrl: 'http://p1.meituan.net/w.h/bbia/cfc2bce9326c0c067e1a7963d44df7d8118994.jpg',
-          score: '4.1',
+          score: '4.2',
           consumeNum: null,
           areaName: '临平老街',
           lowPrice: '141.0',
@@ -211,14 +221,14 @@ export default {
           areaName: '旺角城/银隆百货',
           lowPrice: '499.0',
           saleNum: null,
-          commentNum: 1378,
+          commentNum: 1380,
           detailUrl: '',
           firstCate: [
             20007,
             20426,
             29
           ],
-          avgPrice: 651
+          avgPrice: 629
         },
         {
           itemId: '2477349',
@@ -236,7 +246,7 @@ export default {
             20426,
             20557
           ],
-          avgPrice: 31
+          avgPrice: 28
         },
         {
           itemId: '4627270',
@@ -265,7 +275,7 @@ export default {
           areaName: '临平老街',
           lowPrice: '88.0',
           saleNum: null,
-          commentNum: 4752,
+          commentNum: 4757,
           detailUrl: '',
           firstCate: [
             1,
@@ -284,7 +294,7 @@ export default {
           areaName: '湖滨/解百商厦',
           lowPrice: '318.0',
           saleNum: null,
-          commentNum: 1051,
+          commentNum: 1053,
           detailUrl: '',
           firstCate: [
             2,
@@ -303,7 +313,7 @@ export default {
           areaName: '高沙商业街',
           lowPrice: '9.9',
           saleNum: null,
-          commentNum: 12195,
+          commentNum: 12234,
           detailUrl: '',
           firstCate: [
             2,
@@ -315,14 +325,14 @@ export default {
         },
         {
           itemId: '168927026',
-          title: '卢金文烤鱼•龙虾•烧烤馆（下沙学林街店）',
+          title: '卢金文烤鱼·龙虾·炭锅鸡（下沙学林街店）',
           imgUrl: 'https://img.meituan.net/w.h/msmerchant/f857f2e91c0d2661200ac92f1d01a795862507.jpg',
           score: '5.0',
           consumeNum: null,
           areaName: '高沙商业街',
           lowPrice: '69.0',
           saleNum: null,
-          commentNum: 534,
+          commentNum: 535,
           detailUrl: '',
           firstCate: [
             1,
@@ -330,7 +340,7 @@ export default {
             20426,
             20557
           ],
-          avgPrice: 59
+          avgPrice: 58
         }
       ]
     }
@@ -442,6 +452,21 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+      .score-line {
+        div {
+          display: inline-block;
+        }
+        .comment-number {
+          margin-left: 10px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 12px;
+          color: $color-text-secondary;
+        }
+      }
+      .score-line.aligned {
+        height: 24px;
       }
       .desc-line.aligned {
         height: 18px;

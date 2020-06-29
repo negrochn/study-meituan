@@ -217,6 +217,10 @@ a {
   content: "\e609";
 }
 
+.icon-star_icon:before {
+  content: "\e606";
+}
+
 @font-face {
   font-family: "MFShangHei-Regular";
   src: url("~assets/font/MFShangHei-Regular.eot"); /* IE9 */
