@@ -412,6 +412,11 @@ export default {
       vertical-align: middle;
       .card-container {
         padding: 10px;
+        &:hover {
+          background: #f4f4f4;
+          border-radius: 4px;
+          transition: background-color .5s;
+        }
       }
     }
   }
