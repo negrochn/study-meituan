@@ -23,7 +23,8 @@
         <div class="b-n-sublist">
           <dd v-for="classify in hotClassifyList" :key="classify.label" class="b-n-list-item">
             <nuxt-link to="/">
-              {{ classify.label }}
+              <span>{{ classify.label }}</span>
+              <span v-if="classify.promotion" class="nav-promotion">{{ classify.promotion }}</span>
             </nuxt-link>
           </dd>
         </div>
@@ -72,7 +73,7 @@ export default {
         { label: '广州' }
       ],
       hotClassifyList: [
-        { label: '酒店' },
+        { label: '酒店', promotion: 'HOT' },
         { label: '美食' },
         { label: '休闲娱乐' },
         { label: '运动健身' },
@@ -119,5 +120,90 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/css/variables.scss';
 
+.botton-nav {
+  margin: 40px auto 0;
+  width: 1190px;
+  height: auto;
+  background: $color-white;
+  border: 1px solid $border-color-base;
+  border-radius: 4px;
+  .title {
+    padding-top: 6px;
+    padding-left: 20px;
+    width: auto;
+    height: 44px;
+    line-height: 44px;
+    font-size: 16px;
+    color: $color-text-primary;
+    font-weight: 500;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .b-n-content {
+    width: 100%;
+    height: auto;
+    .b-n-classification {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      .b-n-subtitle {
+        float: left;
+        padding: 10px 0;
+        width: 100px;
+        height: 100%;
+        line-height: initial;
+        color: $color-text-primary;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .b-n-sublist {
+        float: left;
+        padding-top: 12px;
+        width: 1090px;
+        height: auto;
+        border-bottom: 1px solid $border-color-base;
+        overflow: hidden;
+        .b-n-list-item {
+          float: left;
+          margin-bottom: 13px;
+          width: 100px;
+          height: 17px;
+          font-size: 12px;
+          a {
+            display: block;
+            width: 80px;
+            line-height: initial;
+            color: $color-text-regular;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            &:hover {
+              color: #fe8c00;
+            }
+          }
+          .nav-promotion {
+            position: relative;
+            top: -1px;
+            margin: 0 5px;
+            padding: 0 6px;
+            background: #FF4848;
+            font-size: 12px;
+            color: $color-white;
+            font-weight: 400;
+            border-radius: 10px;
+          }
+        }
+      }
+      &:last-child {
+        .b-n-sublist {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
 </style>
