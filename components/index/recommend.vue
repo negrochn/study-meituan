@@ -1,15 +1,11 @@
 <template>
   <div class="recommend-container">
-    <div style="background: linear-gradient(to right, rgb(88, 174, 221) 2%, rgb(66, 191, 205) 97%) rgb(88, 174, 221);" class="index-nav-container">
-      <ul class="clearfix">
-        <li class="title nav-item mf-shang-hei-regular">
-          猜你喜欢
-        </li>
-        <li class="nav-item active">
-          为你甄选最适合的
-        </li>
-      </ul>
-    </div>
+    <IndexNavContainer
+      title="猜你喜欢"
+      background="linear-gradient(to right, rgb(88, 174, 221) 2%, rgb(66, 191, 205) 97%) rgb(88, 174, 221);"
+      :list="indexNavList"
+      :label="curRecommendClassify"
+    />
     <div class="recommend-list">
       <nuxt-link v-for="recommend in recommendList" :key="recommend.itemId" :to="`/xiuxianyule/${recommend.itemId}`" class="recommend-item">
         <div class="card-container">
@@ -50,15 +46,21 @@
 </template>
 
 <script>
+import IndexNavContainer from './index-nav-container'
 import Score from './score'
 
 export default {
   name: 'Recommend',
   components: {
+    IndexNavContainer,
     Score
   },
   data () {
     return {
+      indexNavList: [
+        { label: '为你甄选最适合的' }
+      ],
+      curRecommendClassify: '为你甄选最适合的',
       recommendList: [
         {
           itemId: '560649580',
@@ -354,45 +356,6 @@ export default {
 .recommend-container {
   margin: 40px auto 0;
   width: 100%;
-  .index-nav-container {
-    box-sizing: border-box;
-    width: 100%;
-    height: 44px;
-    line-height: 44px;
-    font-size: 14px;
-    color: $color-white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    .title {
-      font-size: 18px;
-      margin-left: 13px;
-      margin-right: 10px;
-    }
-    .nav-item {
-      position: relative;
-      float: left;
-      padding: 0 5px;
-      cursor: pointer;
-      text-transform: uppercase;
-      &.active:after {
-        content: " ";
-        position: absolute;
-        display: block;
-        top: 37px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 2px;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 7px solid $color-white;
-      }
-    }
-  }
-  .mf-shang-hei-regular {
-    font-family: "MFShangHei-Regular" !important;
-  }
   .recommend-list {
     box-sizing: border-box;
     padding: 10px 10px 20px;
