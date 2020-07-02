@@ -7,6 +7,7 @@
       :label="curRecommendClassify"
     />
     <div class="recommend-list">
+      <RecommendItem />
       <nuxt-link v-for="recommend in recommendList" :key="recommend.itemId" :to="`/xiuxianyule/${recommend.itemId}`" class="recommend-item">
         <div class="card-container">
           <div class="recommend-card-wrapper">
@@ -47,12 +48,14 @@
 
 <script>
 import IndexNavContainer from './index-nav-container'
+import RecommendItem from './recommend-item'
 import Score from './score'
 
 export default {
   name: 'Recommend',
   components: {
     IndexNavContainer,
+    RecommendItem,
     Score
   },
   data () {
