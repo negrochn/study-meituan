@@ -1,29 +1,64 @@
-// Background Color
-$color-white: #FFFFFF;
-$background-color-base: #F8F8F8;
-$background-color-heavy: #F4F4F4;
-$color-orange: #FFC300;
+// Color
+$color-text-primary: #222;
+$color-text-regular: #666;
+$color-text-secondary: #999;
 
-// Font Color
-$color-text-primary: #222222;
-$color-text-regular: #666666;
-$color-text-secondary: #999999;
-$color-text-placeholder: #999999;
-$color-text-hover: #FE8C00;
-$color-text-span: #111111; // 颜色差值跨度
-$color-text-span2: #020202; // 颜色插值跨度2
+$color-link-hover: #fe8c00;
+
+$color-text-primary-light: #333;
+
+$color-text-white: #fff;
+$color-text-red: #ec5330;
+$color-text-gray: #3f3f3f;
+$color-text-nav-text: #646464;
+$color-text-nav-right-arrow: #bfbfbf;
+$color-text-price: #ff6600;
+$color-text-film-score: #fd9827;
+
+$color-link-waimai-hover: #fbc700;
+$color-link-maoyan-hover: #ed1e24;
+$color-link-hotel-hover: #f04d4e;
+$color-link-homestay-hover: #fdc411;
+$color-link-merchant-hover: #fe8c00;
+$color-link-gongyi-hover: #f04d4e;
+
+$color-rate-star-dark: #c3c3c3;
+$color-rate-star-light: #ff9900;
+
+// Background Color
+$bg-color-white: #fff;
+$bg-color-base: #f8f8f8;
+
+$bg-color-slider: #333;
+$bg-color-header-search-btn: #ffc300;
+$bg-color-nav-promotion-red: #ff4848;
+$bg-color-nav-promotion-yellow: #fff3cc;
+$bg-color-nav-promotion-yellow-hover: linear-gradient(to bottom right,#ffd000,#ffbd00);
+$bg-color-film-info: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 0%, rgba(29, 45, 55, 0.80) 99%);
+$bg-color-btn-login-hover: #f6f6f6;
+$bg-color-reommend-card-hover: #f4f4f4;
+$bg-color-nav-li-hover: rgba(255, 150, 0, 0.08);
 
 // Border Color
-$border-color-base: #E5E5E5;
+$border-color-base: #e5e5e5;
+$border-color-white: #fff;
+$border-color-nav-right-arrow: #bfbfbf;
+$border-color-nav-right-arrow-hover: #222;
+
+// BoxShadow Color
+$bs-color-black-0_1: rgba(0, 0, 0, 0.1);
+$bs-color-black-0_15: rgba(0, 0, 0, 0.15);
+$bs-color-black-0_2: rgba(0, 0, 0, 0.2);
+
 
 // @minxi
-$shadows: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+$shadows: 0 3px 5px 0 $bs-color-black-0_1;
 
 @mixin box-shadow($shadow...) {
   box-shadow: $shadow;
 }
 
-@mixin a($color: $color-text-secondary, $color-hover: $color-text-hover) {
+@mixin a($color: $color-text-secondary, $color-hover: $color-link-hover) {
   color: $color;
   &:hover {
     color: $color-hover;

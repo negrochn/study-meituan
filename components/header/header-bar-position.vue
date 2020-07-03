@@ -59,13 +59,13 @@ export default {
   .change-city {
     margin: 0 4px;
     padding: 0 2px;
-    background: $background-color-heavy;
+    background: $bg-color-reommend-card-hover;
     border: 1px solid $border-color-base;
     border-radius: 2px;
     color: $color-text-regular;
     // 由于设置了color，a的统一样式失效，需要重新设置a:hover
     &:hover {
-      color: $color-text-hover;
+      color: $color-link-hover;
     }
   }
   .near-citys {
@@ -81,7 +81,7 @@ export default {
       display: inline;
       margin-left: 10px;
       a {
-        color: $color-text-hover; // 立即登录特殊处理
+        color: $color-link-hover; // 立即登录特殊处理
       }
     }
     .extra-entry {

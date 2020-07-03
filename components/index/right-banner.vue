@@ -119,11 +119,10 @@ export default {
       margin: 0 10px;
       width: 150px;
       height: 240px;
-      background: #ccc;
       background-size: 150px;
       background-position: 50%;
       background-repeat: no-repeat;
-      background-color: $color-white;
+      background-color: $bg-color-white;
     }
     .pic-2, .pic-3 {
       margin-top: 10px;
@@ -142,7 +141,7 @@ export default {
       background-size: 150px;
       background-position: 50%;
       background-repeat: no-repeat;
-      background-color: $color-white;
+      background-color: $bg-color-white;
     }
     .download-app {
       margin-top: 10px;

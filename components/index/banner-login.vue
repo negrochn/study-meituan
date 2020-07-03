@@ -29,7 +29,7 @@ export default {
 .login-container {
   width: 228px;
   height: 238px;
-  background: $color-white;
+  background: $bg-color-white;
   border: 1px solid $border-color-base;
   .default {
     position: relative;
@@ -62,7 +62,7 @@ export default {
     margin: 10px auto 15px;
     width: 118px;
     line-height: 38px;
-    background: $color-white;
+    background: $bg-color-white;
     border: 1px solid $border-color-base;
     border-radius: 40px;
     font-size: 14px;

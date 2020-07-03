@@ -126,7 +126,7 @@ export default {
   margin: 40px auto 0;
   width: 1190px;
   height: auto;
-  background: $color-white;
+  background: $bg-color-white;
   border: 1px solid $border-color-base;
   border-radius: 4px;
   .title {
@@ -192,7 +192,7 @@ export default {
             padding: 0 6px;
             background: #FF4848;
             font-size: 12px;
-            color: $color-white;
+            color: $color-text-white;
             font-weight: 400;
             border-radius: 10px;
           }

@@ -699,8 +699,8 @@ export default {
     margin-top: -50px;
     width: 230px;
     height: 475px;
-    background: $color-white;
-    color: $color-text-regular - $color-text-span2;
+    background: $bg-color-white;
+    color: $color-text-nav-text;
     border: 1px solid $border-color-base;
     .category-nav-title-wrapper {
       box-sizing: border-box;
@@ -729,7 +729,7 @@ export default {
       left: 230px;
       width: 400px;
       height: 416px;
-      background: $color-white;
+      background: $bg-color-white;
       color: $color-text-regular;
       overflow: hidden;
       z-index: 199;

@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 body {
-  background-color: $background-color-base;
+  background-color: $bg-color-base;
   font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "MIcrosoft YaHei", sans-serif !important;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,7 +32,7 @@ body {
 
 .com-header {
   @include box-shadow(0 2px 27px 0 rgba(0, 0, 0, 0.1));
-  background: $color-white;
+  background: $bg-color-white;
 }
 .com-header .header-icon {
   font-family: "com_header" !important;

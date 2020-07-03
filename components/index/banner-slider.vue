@@ -110,7 +110,7 @@ export default {
       margin-right: 10px;
       width: 10px;
       height: 2px;
-      background: $color-white;
+      background: $bg-color-white;
       opacity: .2;
       transition: opacity .5s;
       &:last-child {
@@ -133,7 +133,7 @@ export default {
     cursor: pointer;
     .iconfont {
       line-height: 40px;
-      color: $color-white;
+      color: $color-text-white;
       font-size: 20px;
       text-align: center;
     }

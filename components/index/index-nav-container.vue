@@ -67,7 +67,7 @@ export default {
   height: 44px;
   line-height: 44px;
   font-size: 14px;
-  color: $color-white;
+  color: $color-text-white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   .title {
@@ -93,14 +93,14 @@ export default {
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 7px solid $color-white;
+      border-bottom: 7px solid $border-color-white;
     }
   }
   .total {
     float: right;
     margin-right: 12px;
     a {
-      color: $color-white;
+      color: $color-text-white;
     }
   }
   .right-arrow {

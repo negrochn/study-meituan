@@ -212,7 +212,7 @@ export default {
         right: -1px;
         top: 95%;
         width: 100%;
-        background: $color-white;
+        background: $bg-color-white;
         text-align: center;
         border: 1px solid $border-color-base;
         border-bottom-left-radius: 4px;
@@ -225,7 +225,7 @@ export default {
           right: 0;
           width: 76px;
           height: 3px;
-          background: $color-white;
+          background: $bg-color-white;
         }
         li {
           text-align: center;
@@ -296,8 +296,8 @@ export default {
     & > .has-child {
       &:hover {
         @include box-shadow($shadows);
-        background-color: $color-white;
-        color: $color-text-hover;
+        background-color: $bg-color-white;
+        color: $color-link-hover;
         border-color: $border-color-base;
       }
     }

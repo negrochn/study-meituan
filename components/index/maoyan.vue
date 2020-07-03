@@ -186,7 +186,7 @@ export default {
             margin-top: 48px;
             padding-left: 10px;
             font-size: 12px;
-            color: $color-white;
+            color: $color-text-white;
             font-weight: 500;
             text-align: left;
             span {
@@ -199,7 +199,7 @@ export default {
             padding-left: 10px;
             width: 6em;
             font-size: 16px;
-            color: $color-white;
+            color: $color-text-white;
             font-weight: 500;
             text-align: left;
             white-space: nowrap;
@@ -224,7 +224,7 @@ export default {
       .iconfont {
         line-height: 40px;
         font-size: 20px;
-        color: $color-white;
+        color: $color-text-white;
         text-align: center;
       }
     }

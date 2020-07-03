@@ -38,7 +38,7 @@ export default {
     width: 100%;
     height: 40px;
     line-height: initial; // reset.css统一设置line-height: 1，此处需要重新设置
-    background-color: $background-color-base;
+    background-color: $bg-color-base;
     color: $color-text-secondary;
     font-size: 12px;
   }

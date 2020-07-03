@@ -91,7 +91,7 @@ export default {
   .header-search-block {
     width: 550px;
     height: 40px;
-    background: $color-white;
+    background: $bg-color-white;
     .header-search-input {
       box-sizing: border-box;
       padding: 15px;
@@ -105,7 +105,7 @@ export default {
       border-right: none;
       border-radius: 4px 0 0 4px;
       &::placeholder {
-        color: $color-text-placeholder;
+        color: $color-text-secondary;
       }
     }
     .header-search-btn {
@@ -114,7 +114,7 @@ export default {
       width: 14.55%;
       height: 100%;
       line-height: 100%;
-      background: $color-orange;
+      background: $bg-color-header-search-btn;
       border: none;
       color: $color-text-primary;
       outline: none;
@@ -128,7 +128,7 @@ export default {
     position: absolute;
     box-sizing: border-box;
     width: 85.45%;
-    background: $color-white;
+    background: $bg-color-white;
     border: 1px solid $border-color-base;
     border-top: none;
     color: $color-text-secondary;
@@ -149,8 +149,8 @@ export default {
         line-height: 1.6;
         cursor: pointer;
         &:hover {
-          background: $background-color-base;
-          color: $color-text-hover;
+          background: $bg-color-base;
+          color: $color-link-hover;
         }
       }
     }

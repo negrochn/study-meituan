@@ -1082,7 +1082,7 @@ export default {
     padding: 20px;
     padding-right: 0;
     padding-bottom: 0;
-    background: $color-white;
+    background: $bg-color-white;
     border: 1px solid $border-color-base;
     border-top: 0;
     border-bottom-left-radius: 4px;

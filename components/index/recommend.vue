@@ -328,7 +328,7 @@ export default {
     padding: 10px 10px 20px;
     width: 100%;
     max-height: 758px;
-    background-color: $color-white;
+    background-color: $bg-color-white;
     border: 1px solid $border-color-base;
     border-top: 0;
     border-bottom-left-radius: 4px;

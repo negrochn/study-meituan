@@ -75,7 +75,7 @@ export default {
       background-size: 100%;
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      border: 2px solid $color-white;
+      border: 2px solid $border-color-white;
     }
   }
   .product-info {
