@@ -66,11 +66,11 @@ export default {
     border: 1px solid $border-color-base;
     border-radius: 40px;
     font-size: 14px;
-    color: #333;
+    color: $color-text-primary-light;
     text-align: center;
     transition: background-color .5s;
     &:hover {
-      background-color: #f6f6f6;
+      background-color: $bg-color-btn-login-hover;
       transition: background-color 0.5s;
     }
   }

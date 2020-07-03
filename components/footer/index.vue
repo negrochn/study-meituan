@@ -256,14 +256,14 @@ export default {
 
 .com-footer {
   margin-top: 40px;
-  background: #f8f8f8;
+  background: $bg-color-base;
   .footer-content {
     box-sizing: border-box;
     width: 1190px;
     margin: 0 auto;
     line-height: 2;
     font-size: 12px;
-    color: #333;
+    color: $color-text-primary-light;
     text-align: left;
     .footer-link {
       padding: 40px 45px;
@@ -276,14 +276,14 @@ export default {
           padding-bottom: 20px;
           color: $color-text-regular;
           dt {
-            color: #333;
+            color: $color-text-primary-light;
             font-size: 14px;
             font-weight: 500;
           }
           a {
             color: $color-text-regular;
             &:hover {
-              color: #fe8c00;
+              color: $color-link-hover;
             }
           }
         }

@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .page.index {
-  height: 2424px;
   line-height: initial;
   .index-container {
     margin: 0 auto;

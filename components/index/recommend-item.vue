@@ -72,7 +72,7 @@ export default {
   .card-container {
     padding: 10px;
     &:hover {
-      background: #f4f4f4;
+      background: $bg-color-reommend-card-hover;
       border-radius: 4px;
       transition: background-color .5s;
     }
@@ -86,7 +86,7 @@ export default {
     padding-bottom: 56.25%;
     width: 100%;
     height: 0;
-    background-color: #f4f4f4;
+    background-color: $bg-color-reommend-card-hover;
     background-image: url(//p0.meituan.net/travelcube/214b8411190e874781fe91dd3096236211567.png);
     background-size: cover;
     background-position: 50% 50%;
@@ -148,7 +148,7 @@ export default {
     }
     .bottom-line {
       .price-box {
-        color: #FF6600;
+        color: $color-text-price;
         .yuan {
           font-size: 14px;
           font-weight: 700;

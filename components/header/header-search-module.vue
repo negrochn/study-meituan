@@ -145,7 +145,7 @@ export default {
       a {
         display: block;
         padding: 3px 10px;
-        color: $color-text-primary + $color-text-primary;
+        color: $color-text-primary-light;
         line-height: 1.6;
         cursor: pointer;
         &:hover {

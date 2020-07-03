@@ -740,7 +740,7 @@ export default {
       padding: 2px 12px;
       height: 26px;
       &:hover {
-        background: rgba(255, 150, 0, 0.08);
+        background: $bg-color-nav-li-hover;
         color: $color-text-primary;
         a {
           font-weight: 700;
@@ -755,7 +755,7 @@ export default {
         }
         .nav-promotion {
           font-weight: 400;
-          background: linear-gradient(to bottom right, #FFD000, #FFBD00);
+          background: $bg-color-nav-promotion-yellow-hover;
         }
       }
       .nav-right-arrow {
@@ -767,9 +767,9 @@ export default {
         margin: auto;
         width: 4px;
         height: 4px;
-        color: #BFBFBF;
-        border-bottom: 1px solid #BFBFBF;
-        border-right: 1px solid #BFBFBF;
+        color: $color-text-nav-right-arrow;
+        border-bottom: 1px solid $border-color-nav-right-arrow;
+        border-right: 1px solid $border-color-nav-right-arrow;
         transform: rotate(-45deg);
       }
     }
@@ -787,7 +787,7 @@ export default {
       height: 20px;
       line-height: 20px;
       font-size: 13px;
-      color: #646464;
+      color: $color-text-nav-text;
       cursor: pointer;
     }
     .nav-promotion {
@@ -795,7 +795,7 @@ export default {
       display: inline-block;
       margin-left: 5px;
       padding: 0 7px;
-      background: #FFF3CC;
+      background: $bg-color-nav-promotion-yellow;
       font-size: 12px;
       color: $color-text-primary;
       border-radius: 10px;
@@ -832,8 +832,8 @@ export default {
           margin: auto;
           width: 4px;
           height: 4px;
-          border-bottom: 1px solid #999;
-          border-right: 1px solid #999;
+          border-bottom: 1px solid $border-color-detail-right-arrow;
+          border-right: 1px solid $border-color-detail-right-arrow;
           transform: rotate(-45deg);
         }
       }

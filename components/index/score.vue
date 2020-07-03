@@ -37,6 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~assets/css/variables.scss';
+
 .score {
   .rate-stars {
     position: relative;
@@ -54,12 +56,12 @@ export default {
       }
     }
     .rate-stars-dark {
-      color: #c3c3c3;
+      color: $color-rate-star-dark;
     }
     .rate-stars-light {
       position: absolute;
       top: 0;
-      color: #FF9900;
+      color: $color-rate-star-light;
       overflow: hidden;
     }
   }

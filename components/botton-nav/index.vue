@@ -190,7 +190,7 @@ export default {
             top: -1px;
             margin: 0 5px;
             padding: 0 6px;
-            background: #FF4848;
+            background: $bg-color-nav-promotion-red;
             font-size: 12px;
             color: $color-text-white;
             font-weight: 400;

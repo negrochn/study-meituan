@@ -181,7 +181,7 @@ export default {
           height: 100px;
           border-bottom-left-radius: 4px;
           border-bottom-right-radius: 4px;
-          background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(29,45,55,0.80) 99%);
+          background-image: $bg-color-film-info;
           .film-score {
             margin-top: 48px;
             padding-left: 10px;
@@ -191,7 +191,7 @@ export default {
             text-align: left;
             span {
               font-size: 16px;
-              color: #FD9827;
+              color: $color-text-film-score;
               font-weight: 500;
             }
           }
@@ -213,7 +213,7 @@ export default {
       position: absolute;
       width: 40px;
       height: 40px;
-      background: #333;
+      background: $bg-color-slider;
       top: 43%;
       text-align: center;
       border-radius: 40px;

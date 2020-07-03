@@ -97,7 +97,7 @@ export default {
     .price {
       padding: 4px 0;
       font-size: 22px;
-      color: #FF6600;
+      color: $color-text-price;
       font-weight: 500;
       letter-spacing: -.8px;
       .price-icon {

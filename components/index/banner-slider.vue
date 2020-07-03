@@ -123,7 +123,7 @@ export default {
     top: 43%;
     width: 40px;
     height: 40px;
-    background: #333;
+    background: $bg-color-slider;
     text-align: center;
     border-radius: 20px;
     transform: scale(.95);

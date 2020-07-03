@@ -37,7 +37,7 @@
         </p>
         <p class="sl">
           <span class="red">1元起</span>
-          <span class="gary">吃喝玩乐</span>
+          <span class="gray">吃喝玩乐</span>
         </p>
       </div>
     </div>
@@ -88,22 +88,22 @@ export default {
       font-weight: 700;
     }
     .waimai-link:hover {
-      color: #FBC700;
+      color: $color-link-waimai-hover;
     }
     .maoyan-link:hover {
-      color: #ED1E24;
+      color: $color-link-maoyan-hover;
     }
     .hotel-link:hover {
-      color: #F04D4E;
+      color: $color-link-hotel-hover;
     }
     .homestay-link:hover {
-      color: #FDC411;
+      color: $color-link-homestay-hover;
     }
     .merchant-link:hover {
-      color: #FE8C00;
+      color: $color-link-merchant-hover;
     }
     .gongyi-link:hover {
-      color: #F04D4E;
+      color: $color-link-gongyi-hover;
     }
   }
   .banner-row {
@@ -147,7 +147,7 @@ export default {
       margin-top: 10px;
       width: 228px;
       height: 165px;
-      background: #fff;
+      background: $bg-color-white;
       border: 1px solid $border-color-base;
       .qrcode-box {
         margin: 10px auto 0;
@@ -171,10 +171,10 @@ export default {
       }
       .red {
         margin-right: 5px;
-        color: #EC5330;
+        color: $color-text-red;
       }
-      .gary {
-        color: #3f3f3f;
+      .gray {
+        color: $color-text-gray;
       }
     }
   }
